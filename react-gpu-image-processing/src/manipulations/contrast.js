@@ -7,7 +7,7 @@ import { fragShader as fragShaderSource } from '../shaders/contrast';
 
 
 // Create a function that takes an image and a contrast level(float value) and returns a new image with the contrast adjusted.
-export default async function changeContrast(image, contrast) {
+async function changeContrast(image, contrast) {
     const gl = await createGL(vertShaderSource, fragShaderSource, image, { contrast })
 
     // we need to use flip option because framebuffer contents are flipped vertically
@@ -18,5 +18,4 @@ export default async function changeContrast(image, contrast) {
     return snapshot;
 }
 
-
-// Some comment
+module.exports = { changeContrast };

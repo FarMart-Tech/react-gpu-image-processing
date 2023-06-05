@@ -3,7 +3,7 @@ import { Asset } from 'expo-asset';
 import * as FileSystem from 'expo-file-system';
 import React, { useEffect, useState } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import { changeContrast, resizeImage } from "react-gpu-image-processing"
+import { changeContrast, resizeImage, a } from "react-gpu-image-processing"
 
 import exampleImage from './assets/elon.jpeg'
 // import exampleImage from './assets/adaptive-icon.png'
@@ -13,10 +13,6 @@ export default function GLHeadlessRenderingScreen() {
   let title = 'Headless rendering';
   const [drawing, setDrawing] = useState(false);
   const [state, setState] = useState({ contrast: 1.0, scale: 1.0 });
-
-  console.log("Change Contrast")
-  console.log(changeContrast)
-
 
   // Load the asset once
   useEffect(() => {
