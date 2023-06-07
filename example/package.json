@@ -24,7 +24,9 @@
     "react-native-web": "~0.18.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@expo/ngrok": "^4.1.1",
+    "react-gpu-image-processing": "file:../react-gpu-image-processing"
   },
   "private": true
 }

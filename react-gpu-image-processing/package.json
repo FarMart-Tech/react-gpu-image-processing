@@ -1,6 +1,6 @@
 {
-  "name": "react-gpu-image-processing",
-  "version": "1.0.1",
+  "name": "@opencollabnexus/react-gpu-image-processing",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
