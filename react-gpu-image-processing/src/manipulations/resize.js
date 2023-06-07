@@ -28,5 +28,4 @@ async function resizeImage(originalImage, outputWidth, outputHeight, method) {
     return snapshot;
 }
 
-
-module.exports = { resizeImage }
+export default resizeImage;

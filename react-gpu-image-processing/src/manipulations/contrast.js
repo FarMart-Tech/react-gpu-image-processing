@@ -18,4 +18,4 @@ async function changeContrast(image, contrast) {
     return snapshot;
 }
 
-module.exports = { changeContrast };
+export default changeContrast;
