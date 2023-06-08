@@ -20,14 +20,15 @@ npm install @opencollabnexus/glsl-image-processing
 To use this package, import it into your project as follows:
 
 ```javascript
-import { changeContrast, resizeImage } from "glsl-image-processing";
+import {
+  changeContrast,
+  resizeImage,
+} from "@opencollabnexus/glsl-image-processing";
 ```
 
 ### changeContrast
 
 The `changeContrast` function allows you to adjust the contrast of an image. It takes in the following parameters:
-
-<!-- TODO: CONFIRM TYPES OF THE PARAMETERS FOR THESE FUNCTIONS -->
 
 ```javascript
 changeContrast(image: <Asset>, contrast: number)
@@ -42,7 +43,7 @@ The function returns a new array of pixel values representing the modified image
 
 ```javascript
 import React, { useEffect, useState } from "react";
-import { changeContrast } from "glsl-image-processing";
+import { changeContrast } from "@opencollabnexus/glsl-image-processing";
 import exampleImage from "./assets/sample.jpeg";
 
 const [state, setState] = useState({ contrast: 1.0, scale: 1.0 });
@@ -80,7 +81,7 @@ The function returns a new array of pixel values representing the resized image.
 
 ```javascript
 import React, { useEffect, useState } from "react";
-import { resizeImage } from "gpu-image-processing";
+import { resizeImage } from "@opencollabnexus/glsl-image-processing";
 import exampleImage from "./assets/sample.jpeg";
 
 const [state, setState] = useState({ contrast: 1.0, scale: 1.0 });
@@ -96,7 +97,7 @@ useEffect(() => {
   loadAsset();
 }, []);
 
-const resized = resizeImage(image, 200, 100);
+const resized = resizeImage(state.originalImage, 200, 100);
 ```
 
 ## Contributing
