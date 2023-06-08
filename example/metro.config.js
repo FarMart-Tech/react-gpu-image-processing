@@ -1,9 +1,9 @@
 const path = require('path');
 const escape = require('escape-string-regexp');
 const exclusionList = require('metro-config/src/defaults/exclusionList');
-const pak = require('../react-gpu-image-processing/package.json');
+const pak = require('../glsl-image-processing/package.json');
 
-const root = path.resolve(__dirname, '../react-gpu-image-processing');
+const root = path.resolve(__dirname, '../glsl-image-processing');
 
 const modules = Object.keys({
     ...pak.peerDependencies,

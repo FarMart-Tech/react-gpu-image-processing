@@ -3,7 +3,7 @@ import { Asset } from 'expo-asset';
 import * as FileSystem from 'expo-file-system';
 import React, { useEffect, useState } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import  {changeContrast, resizeImage} from "react-gpu-image-processing";
+import  {changeContrast, resizeImage} from "@opencollabnexus/glsl-image-processing";
 
 import exampleImage from './assets/elon.jpeg'
 // import exampleImage from './assets/adaptive-icon.png'
