@@ -6,7 +6,7 @@ import { fragShader as fragShaderBicubicSource } from '../shaders/bicubic';
 import { vertShader as vertShaderSource } from '../shaders/staticvert';
 
 
-async function resizeImage(originalImage, outputWidth, outputHeight, method) {
+async function resizeImage(originalImage, outputWidth, outputHeight, method, snapshotOptions) {
     method = method || 'lanczos';
     let fragShaderSource = null;
     if (method == 'lanczos') {
@@ -22,7 +22,8 @@ async function resizeImage(originalImage, outputWidth, outputHeight, method) {
 
     // we need to use flip option because framebuffer contents are flipped vertically
     const snapshot = await GLView.takeSnapshotAsync(gl, {
-        flip: true,
+        ...snapshotOptions,
+        flip:true
     });
 
     return snapshot;
