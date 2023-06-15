@@ -50,5 +50,6 @@ export interface resizeImageTypes{
             x: number, 
             y: number
         }
-    }
+    },
+    method: 'lanczos' | 'bilinear' | 'bicubic'
 }

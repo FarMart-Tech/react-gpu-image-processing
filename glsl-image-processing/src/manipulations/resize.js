@@ -6,7 +6,7 @@ import { fragShader as fragShaderBicubicSource } from '../shaders/bicubic';
 import { vertShader as vertShaderSource } from '../shaders/staticvert';
 
 
-async function resizeImage(originalImage, outputWidth, outputHeight, method, snapshotOptions) {
+async function resizeImage(originalImage, outputWidth, outputHeight, snapshotOptions,method) {
     method = method || 'lanczos';
     let fragShaderSource = null;
     if (method == 'lanczos') {
