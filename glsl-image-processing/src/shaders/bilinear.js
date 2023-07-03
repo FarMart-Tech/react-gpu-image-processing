@@ -1,4 +1,4 @@
-import { GLSL } from "gl-react";
+import { GLSL } from "@opencollabnexus/gl-react-new";
 
 export const fragShader = GLSL`#version 300 es
 precision highp float;
@@ -26,4 +26,4 @@ void main() {
     vec4 color = texture2D_bilinear(inputImageTexture, textureCoord, vec2(width, height));
     fragColor = color;
 }
-`
+`;
