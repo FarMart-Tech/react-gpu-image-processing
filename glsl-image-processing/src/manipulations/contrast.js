@@ -5,14 +5,14 @@ import { vertShader as vertShaderSource } from '../shaders/staticvert';
 import { fragShader as fragShaderSource } from '../shaders/contrast';
 
 
-
 // Create a function that takes an image and a contrast level(float value) and returns a new image with the contrast adjusted.
-async function changeContrast(image, contrast) {
+async function changeContrast(image, contrast,snapshotOptions) {
     const gl = await createGL(vertShaderSource, fragShaderSource, image, { contrast })
 
     // we need to use flip option because framebuffer contents are flipped vertically
-    const snapshot = await GLView.takeSnapshotAsync(gl, {
-        flip: true,
+    const snapshot = await GLView.takeSnapshotAsync(gl,  {
+        ...snapshotOptions,
+        flip:true
     });
 
     return snapshot;

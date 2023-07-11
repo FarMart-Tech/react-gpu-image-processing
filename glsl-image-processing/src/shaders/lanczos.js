@@ -1,4 +1,4 @@
-import { GLSL } from "gl-react";
+import { GLSL } from "@opencollabnexus/gl-react-new";
 
 export const fragShader = GLSL`#version 300 es
 precision highp float;
@@ -49,4 +49,4 @@ void main() {
     }
     fragColor = vec4(color.rgb, 1.0);
 }
-`
+`;

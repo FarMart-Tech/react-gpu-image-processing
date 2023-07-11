@@ -1,7 +1,7 @@
-import { GLSL } from "gl-react";
+import { GLSL } from "@opencollabnexus/gl-react-new";
 
 export const diamond_crop_shader = {
-    frag: GLSL`
+  frag: GLSL`
 precision highp float;
 varying vec2 uv;
 uniform sampler2D t;
@@ -12,4 +12,4 @@ gl_FragColor = mix(
   step(0.5, abs(uv.x - 0.5) + abs(uv.y - 0.5))
 );
 }`,
-}
+};

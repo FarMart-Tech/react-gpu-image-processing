@@ -1,7 +1,7 @@
-import { GLSL } from "gl-react";
+import { GLSL } from "@opencollabnexus/gl-react-new";
 
 export const box_shader = {
-    'frag': GLSL`
+  frag: GLSL`
     // #version 300 es
     precision highp float;
 
@@ -79,5 +79,5 @@ export const box_shader = {
         vec3 color = texture2D_box(t, uv, vec2(s_width, s_height), vec2(f_x, f_y));
         gl_FragColor = vec4(color, 1.0);
     }
-    `
-}
+    `,
+};
